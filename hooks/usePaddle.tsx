@@ -11,7 +11,6 @@ export default function usePaddle() {
   const [paddle, setPaddle] = useState<Paddle>();
   useEffect(() => {
     initializePaddle({
-      environment: process.env.PADDLE_ENV! ? "production" : "sandbox",
       token: process.env.PADDLE_CLIENT_TOKEN!,
       seller: 20459,
     } as unknown as InitializePaddleOptions).then(
